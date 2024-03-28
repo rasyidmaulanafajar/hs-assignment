@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - JavaScript</title>
+</head>
+<body>
+    <div id="form-login">
+        <div>
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Silahkan isi username">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Silahkan isi password">
+        </div>
+        <div>
+            <br>
+            <button type="button" onclick="login()">Login</button>
+        </div>
+    </div>
+    <div id="form-logined" style="display: none;">
+        <label>Selamat datang Rasyid</label><br><br>
+        <button type="button" onclick="logout()">Logout</button>
+    </div>
+        
+    <script>
+        function login(){
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username == 'rasyid' && password == '123456') {
+                alert('Anda berhasil login');
+
+                document.getElementById('form-login').style.display = 'none';
+                document.getElementById('form-logined').style.display = 'block';
+            } else {
+                alert('Username atau password salah');
+            }
+        }
+
+        function logout() {
+
+            if (confirm('Apakah anda ingin logout ?')) {
+                document.getElementById('form-login').style.display = 'block';
+                document.getElementById('form-logined').style.display = 'none';
+
+                alert('Logout berhasil!');
+            }
+
+        }
+    </script>
+</body>
+</html>

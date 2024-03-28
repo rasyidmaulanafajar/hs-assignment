@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="input" placeholder="Silahkan isi nama">
+        <button type="button" onclick="cekNama()">Tampil</button><br><br>
+        <label>Nama anda adalah : <span id="namaDom"></span></label>
+
+        <script>
+            function cekNama(){
+                var nama = document.getElementById("input").value;
+                document.getElementById("namaDom").innerHTML = nama;
+            }
+        </script>
+    </div>
+</body>
+</html>
